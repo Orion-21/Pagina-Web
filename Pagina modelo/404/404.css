@@ -1,0 +1,266 @@
+
+/*Encabezado*/
+header {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5%;
+  background-color: #24292e;
+  color: white;
+  padding: 10px;
+  z-index: 999;
+}
+
+#icon-menu{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 40px;
+  top: 0px;
+  background: #fafafafa;
+  border-radius: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px;
+}
+
+#icon-menu:hover{
+  opacity: 0.8;
+}
+
+#icon-menu img{
+  position: relative;
+  width: 25px;
+  height: 25px;
+}
+
+
+.logo {
+  width: 100px; /* establece un ancho fijo para el contenedor del logo */
+  height: 50px; /* establece una altura fija para el logo */
+  display: flex;
+  align-items: center;
+}
+
+
+.logo h2{
+  margin-left: 10px;
+}
+
+.logo img {
+  height: 100%; /* establece la altura del logo para que llene el contenedor */
+  width: auto; /* permite que el ancho se ajuste automáticamente */
+  border-radius:50%;
+}
+
+nav ul {
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  display: flex;
+  list-style: none;
+  display: flex;
+}
+
+nav a {
+  margin-right: 20px;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.4s ease, color 0.4s ease; /* Agregar la propiedad transition */
+}
+
+nav a:hover {
+  background-color: white;
+  color: black;
+}
+
+button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+
+/*Cuerpo de la Pagina*/
+
+@font-face {
+  font-family: 'Arvo-Regular';
+  src: url('Arvo-Regular.ttf');
+}
+
+body{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#Error404{
+  position: relative;
+  z-index:999;
+}
+
+#ErrorGif {
+  position: relative; /* establece la posición */
+  z-index: 0;
+  margin-top: -150px ;
+  margin: -150px -150px
+}
+
+#parrafo{
+  position: relative;
+  z-index: 999;
+}
+
+#Grupo404 {
+  position: relative; /* establece la posición */
+  font-family: 'Arvo-Regular';
+  margin: 100px auto;
+  margin-top: 100px;
+  z-index: 1;
+}
+footer {
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  bottom: 1;
+  left: 0;
+  right: 0;
+  background-color: #24292e;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  margin: 20px 0;
+  max-width: 100%;
+  z-index: 999;
+}
+
+/*Responsive Desing - Adaptable a dispositivos Moviles*/
+
+@media screen and (max-width: 1220px) {
+
+  header,
+  .container-content,
+  footer{
+    max-width: 1000px;
+    padding: 0 20px; 
+  }
+}
+  @media screen and (max-width: 900px) {
+
+    #container-content,#primerParrafo{
+      width: 100%;
+      flex-direction: column;
+      font-size: 20px;
+    }
+
+    #segundorParrafo{
+      width: 100%;
+      flex-direction: column;
+      font-size: 20px;
+  }
+
+    #Nominados{
+      width: 100%;
+      flex-direction: column;
+      font-size: 20px;
+    }
+
+}
+
+@media screen and (max-height:770px) {
+  
+  #icon-menu{
+    width: 25px;
+    height: 25px;
+  }
+
+
+}
+
+@media screen and (max-width: 900px) {
+
+  .container-all{
+    transition: all 300ms cubic-bezier(1,0,0,1);
+  }
+
+  .move-container-all{
+    transform: translateX(300px);
+  }
+
+  .logo {
+    height: 75%;
+  }
+
+  .menu {
+    width: 0px;
+    height: 100vh;
+    position: fixed;
+    top: 5%;
+    left: 0;
+    background: #24292e;
+    overflow: hidden;
+    transform: translateX(-350px);
+    box-shadow: 10px 0 20px -25px black;
+    transition: all 300ms cubic-bezier(1,0,0,1);
+  }
+
+  .show-lateral{
+    width: 300px;
+    transform: translateX(0px);
+  }
+
+  .menu nav ul {
+    flex-direction: column;
+    padding: 0; /* Elimina el relleno para evitar espacios innecesarios */
+  }
+
+  .menu nav ul li {
+    height: 50px;
+    justify-content: center;
+    margin-bottom: 10px; /* Agrega un margen inferior para separar los elementos */
+  }
+
+  .menu nav ul a {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    display: block; /* Asegura que los elementos sean de tipo bloque */
+  }
+
+#icon-menu{
+  display: flex;
+}
+
+#ErrorGif{
+  width: 100%;
+  margin: 0px -150px;
+}
+
+#parrafo{
+  font-size: 35px;
+}
+
+}
+
+
+
+
+
